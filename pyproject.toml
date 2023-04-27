@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+#### #### #### #### #### #### #### #### #### ####
+
+[project]
+name = "rp.events"
+version = "0.0.1"
+description = "A module to easily create and manage events into any Python class."
+readme = "README_pypi.md"
+keywords = ["lib-base", "robypomper", "events", "signals"]
+license = {text = "Apache License, Version 2.0"}
+authors = [{ name="Roberto Pompermaier", email="robypomper@johnosproject.org" }, ]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+]
+requires-python = ">=3.7"
+dependencies = []
+
+[project.urls]
+"Homepage" = "https://github.com/rp-opensource/com.robypomper.events.python"
+"Bug Tracker" = "https://github.com/rp-opensource/com.robypomper.events.python/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pip",
+    "build",
+    "setuptools",
+    "twine",
+    "wheel",
+]
+test = [
+    "pytest~=7.3.0",
+    "pytest-cov~=4.0.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+#### #### #### #### #### #### #### #### #### ####
+
+[tool.pytest.ini_options]
+addopts = "--cov --cov-report html --cov-report term-missing --cov-fail-under 95"
+
+[tool.coverage.run]
+source = ["src"]

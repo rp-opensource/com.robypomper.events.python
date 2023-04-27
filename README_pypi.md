@@ -1,4 +1,4 @@
-# `rp.events` repository
+# rp.events
 
 A tiny Python library for adding events to your classes also as decorators.
 
@@ -8,8 +8,6 @@ A tiny Python library for adding events to your classes also as decorators.
 **Language:** Python 3 \
 **Distribution repository:** [https://pypi.org/project/rp.events]() \
 **Source:** [https://github.com/rp-opensource/com.robypomper.events.python]()
-
-[PROJECT](PROJECT.md) | [TODOs](TODOs.md) | [LICENSE](LICENSE) | [CHANGELOG](CHANGELOG.md) | [ROADMAP](ROADMAP.md)
 
 ---
 
@@ -28,7 +26,7 @@ declare the register/deregister/emit methods and forward their calls to the
 corresponding `EventManager` instance. \
 In order to avoid repetitive code, this module provides the `register_owner_methods()`
 method that adds the event's specific methods to the event's owner (normally the
-hosting class itself). More info on this method can be found at [`events_with_decorators.py`](#examples)
+hosting class itself). More info on this method can be found at `events_with_decorators.py`
 example.
 
 ---
@@ -184,33 +182,5 @@ if __name__ == "__main__":
 
 ## Documentation
 
-This project's documentation is arranged in 3 groups:
-
-* Project: include this file and all other files related with the project and his development \
-  [PROJECT](PROJECT.md) | [TODOs](TODOs.md) | [LICENSE](LICENSE) | [CHANGELOG](CHANGELOG.md) | [ROADMAP](ROADMAP.md)
-* `rp.events` library: any source code contains his documentation including how to use it and examples
-  [events.py](src/rp/events/events.py)
-* Tools: project's tools are scripts self-documented \
-  [clean.sh](scripts/clean.sh) | [tests.sh](scripts/tests.sh)
-
-More info about how to write the project documentation, at the [PROJECT / Documentation](PROJECT.md#documentation)
-section.
-
----
-
-## Examples
-
-Within this sources repository there are 2 examples available:
-
-* [Register/deregister methods](examples/events_register_methods.py)
-* [Decorators](examples/events_with_decorators.py)
-
-To run those examples, execute them from a python interpreter with the `rp.events`
-module installed.
-
----
-
-## License
-
-This module and his source code are released under the [Apache 2.0](LICENSE)
-licence.
+More info about how to use the EventManager and the other methods from this
+module please see his [source repository](https://github.com/rp-opensource/com.robypomper.events.python).
